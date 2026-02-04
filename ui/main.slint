@@ -1,0 +1,18 @@
+export component MainWindow inherits Window {
+    in-out property <image> current-image;
+    in property <string> image-info: "";
+    in property <bool> stay-on-top: false;
+
+    title: image-info != "" ? "MCP Image Previewer — " + image-info : "MCP Image Previewer";
+    always-on-top: stay-on-top;
+    background: #1e1e1e;
+    preferred-width: 800px;
+    preferred-height: 600px;
+
+    VerticalLayout {
+        Image {
+            source: current-image;
+            image-fit: contain;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "mcp-image-previewer",
+  "version": "0.1.2",
+  "description": "MCP server for previewing base64-encoded images from other MCP servers",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "mcp-image-previewer": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "sharp": "^0.34.5",
+    "slint-ui": "^1.14.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}
