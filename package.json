@@ -4,12 +4,40 @@
   "description": "MCP server for previewing base64-encoded images from other MCP servers",
   "type": "module",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
     "mcp-image-previewer": "dist/index.js"
   },
+  "files": [
+    "dist",
+    "ui"
+  ],
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "image",
+    "preview",
+    "viewer",
+    "slint",
+    "gui"
+  ],
+  "author": "Tasuku Suzuki <tasuku.suzuki@signal-slot.co.jp>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/signal-slot/mcp-image-previewer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/signal-slot/mcp-image-previewer/issues"
+  },
+  "homepage": "https://github.com/signal-slot/mcp-image-previewer#readme",
+  "engines": {
+    "node": ">=18"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",
