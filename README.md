@@ -14,7 +14,15 @@ An MCP (Model Context Protocol) server that previews base64-encoded images in a 
 
 - Node.js 18+
 
-## Usage
+## Installation
+
+### Claude Code
+
+```bash
+claude mcp add image-previewer -- npx mcp-image-previewer
+```
+
+### Manual configuration
 
 Add to your MCP client configuration:
 
